@@ -18,6 +18,7 @@
         <tr>
             <th>번호</th>
             <th>제목</th>
+            <th>작성자</th>
             <th>작성일시</th>
         </tr>
         </thead>
@@ -28,6 +29,7 @@
             <td>
                 <a use:link href="/detail/{question.id}" class="question-link">{question.subject}</a>
             </td>
+            <td>아무개</td>
             <td>{question.create_date}</td>
         </tr>
         {/each}
@@ -57,7 +59,7 @@
 
     th, td {
         padding: 12px 15px;
-        text-align: left;
+        text-align: center;
         font-size: 14px;
         border-bottom: 1px solid #ddd;
     }
@@ -66,6 +68,18 @@
         background-color: #5C4450;
         color: white;
     }
+    td:nth-child(1){
+        width:10%;
+    }
+    td:nth-child(2) {
+        width:60%;
+    }
+    td:nth-child(3){
+        width:10%;
+    }
+    td:nth-child(4){
+        width:20%;
+    } 
 
     tr:hover {
         background-color: #f1f1f1;
@@ -95,7 +109,7 @@
     }
 
     .create-btn:hover {
-        background-color: #2F3148;
+        background-color: #FF4F00;
     }
 
 </style>
